@@ -31,7 +31,12 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.scss"
+              "src/styles.scss",
+              "node_modules/primeicons/primeicons.css",
+              "node_modules/primeng/resources/themes/md-light-indigo/theme.css",
+              "node_modules/primeng/resources/primeng.min.css",
+              "./node_modules/primeflex/primeflex.css",
+              "node_modules/@fortawesome/fontawesome-free/css/all.css"
             ],
             "scripts": []
           },
@@ -127,5 +132,8 @@
       }
     }
   },
-  "defaultProject": "alelo-frota-web"
+  "defaultProject": "alelo-frota-web",
+  "cli": {
+    "analytics": "80660277-6aa4-4938-94bd-552a21bfe7db"
+  }
 }

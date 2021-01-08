@@ -1,0 +1,54 @@
+<p-messages></p-messages>
+<p-card class="p-shadow-8" [header]="textHeader"
+  [style]="{'background-color': '#DDDDDD'}">
+
+
+  <div class="p-grid">
+    <div class="p-col">
+      <form>
+        <h5 *ngIf="!isEdit">Plate</h5>
+        <h5 *ngIf="isEdit">Plate (disabled)</h5>
+          <input  class="p-inputtext p-input-filled p-component ng-pristine ng-valid ng-touched p-d-block p-col-6"
+             type="text" pInputText [disabled]="isEdit" [(ngModel)]="vehicle.plate" id="plate" name="plate">
+
+          <h5>Model</h5>
+          <input  class="p-inputtext p-input-filled p-component ng-pristine ng-valid ng-touched p-d-block p-col-6"
+            type="text" pInputText [(ngModel)]="vehicle.model" id="model" name="model">
+
+          <h5>Manufacturer</h5>
+          <input  class="p-inputtext p-input-filled p-component ng-pristine ng-valid ng-touched p-d-block p-col-6"
+            type="text" pInputText [(ngModel)]="vehicle.manufacturer" id="manufacturer" name="manufacturer">
+
+          <h5>Color</h5>
+          <input  class="p-inputtext p-input-filled p-component ng-pristine ng-valid ng-touched p-d-block p-col-6"
+           type="text" pInputText [(ngModel)]="vehicle.color" id="color" name="color">
+
+           <h5>Basic</h5>
+           <div class="p-formgroup-inline">
+            <div class="p-field-radiobutton">
+              <p-radioButton name="status1" [value]="true" [(ngModel)]="vehicle.status"  inputId="status1"></p-radioButton>
+              <label for="status1">Active</label>
+            </div>
+            <div class="p-field-radiobutton">
+              <p-radioButton name="status2" [value]="false" [(ngModel)]="vehicle.status"   inputId="status2"></p-radioButton>
+              <label for="status2">Inactive</label>
+            </div>
+           </div>
+           <div class="p-formgroup-inline">
+            <button (click)="resetAll()" pButton pRipple type="button" label="Reset All" class="p-button-raised p-button-text"></button>
+            <button (click)="saveOrUpdate()" pButton pRipple type="button" label="Save" class="p-button-raised p-button-danger" style="margin-left: 25px;"></button>
+           </div>
+
+      </form>
+
+
+    </div>
+    <div class="p-col-3">
+      <img src="../../../../assets/car.png">
+    </div>
+
+  </div>
+
+
+</p-card>
+
